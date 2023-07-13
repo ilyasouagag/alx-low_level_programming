@@ -4,11 +4,11 @@
  *
  * printf: returns the output
  *
- * return : return 0 in this case
+ * Return : (0) in this case
  *
  */
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art\n");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
 }
