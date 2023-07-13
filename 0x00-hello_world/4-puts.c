@@ -1,6 +1,9 @@
 #include <stdio.h>
 /**
- * first day in C
+ * main -it prints output using puts
+ *
+ * Return: always (0)
+ *
  */
 int main(void)
 {
