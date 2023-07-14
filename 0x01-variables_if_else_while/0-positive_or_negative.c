@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/**
+ * main - the function that contains the code
+ *
+ * Return: 0 in this case
+ */
 int main(void)
 {
 	int n;
