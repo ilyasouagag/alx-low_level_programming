@@ -1,0 +1,25 @@
+ #!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo "Please provide a filename as an argument."
+  exit 1
+fi
+
+filename=$1
+
+# Create the .c file
+touch "$filename.c"
+
+# Add the header to the file
+echo "#include <stdio.h>" >> "$filename.c"
+echo "#include <string.h>" >> "$filename.c"
+echo "/**" >> "$filename.c"
+echo " * main - contains the code" >> "$filename.c"
+echo " *" >> "$filename.c"
+echo " * Return: 0 always in main" >> "$filename.c"
+echo " */" >> "$filename.c"
+echo "int main(void) {" >> "$filename.c"
+echo "    return 0;" >> "$filename.c"
+echo "}" >> "$filename.c"
+
+echo "Created $filename.c"
