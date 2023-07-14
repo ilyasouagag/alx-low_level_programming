@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			for (k i= i; k <= 9; k++)
+			for (k = i; k <= 9; k++)
 			{
 				for (m = j + 1; m <= 9; m++)
 				{
