@@ -13,7 +13,7 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		sum = a + b;
-		printf("%lu\n", sum);
+		printf("%lu", sum);
 		a = b;
 		b = sum;
 		if (i == 49)
