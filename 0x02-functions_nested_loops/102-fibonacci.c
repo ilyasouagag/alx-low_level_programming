@@ -17,9 +17,12 @@ int main(void)
 		a = b;
 		b = sum;
 		if (i == 49)
+		{
 			printf("\n");
-		else
+		} else
+		{
 			printf(", ");
+		}
 	}
 	return (0);
 }
