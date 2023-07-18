@@ -19,7 +19,7 @@ int main(void)
 		if (i != 49)
 		{
 			printf(", ");
-		} else
+		} else if (i == 49)
 		{
 			printf("\n");
 		}
