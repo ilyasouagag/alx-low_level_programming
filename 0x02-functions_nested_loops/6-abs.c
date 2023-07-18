@@ -2,14 +2,12 @@
 /**
  * _abs - checks for lowercase character
  *
- * @int: parameter of function
+ * @a: parameter of function
  *
  * Return: always 0 (Success)
  */
-int _abs(int)
+int _abs(int a)
 {
-	int a;
-
 	if (a < 0)
 		return (-a);
 	return (a);
