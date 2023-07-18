@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * sum_natural - adds two integers and returns the result
+ * main - the function that execute programm
  *
  * Return: always 0 (Success)
  */
-void sum_natural(void)
+int main(void)
 {
 	int i = 0, sum = 0;
 
@@ -17,4 +17,5 @@ void sum_natural(void)
 		i++;
 	}
 	printf("%d", sum);
+	return (0);
 }
