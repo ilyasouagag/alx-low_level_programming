@@ -4,7 +4,7 @@
  *
  * Return: always 0 (Success)
  */
-int sum_natural(void)
+void sum_natural(void)
 {
 	int i = 0, sum = 0;
 
