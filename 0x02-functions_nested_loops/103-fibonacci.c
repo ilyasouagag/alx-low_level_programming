@@ -7,19 +7,19 @@
 
 int main(void)
 {
-	unsigned long a = 0, b = 1, sum = 0, sum2 = 0;
+	unsigned long a = 0, b = 1, sum = 0;
+	float sum2 = 0;
 
-	while (b < 4000000)
+	while (1)
 	{
-                sum = a + b;
-                printf("%lu", sum);
-                a = b;
-                b = sum;
-                if (b % 2 == 0)
-		{
-			sum2 += b;
-		}
+		sum = a + b;
+		if (sum > 4000000)
+			break;
+		if ((sum % 2) == 0)
+			sum2 += sum;
+		a = b;
+		b = sum;
 	}
-	printf("%lu\n",sum2);
-        return (0);
+	printf("%.0f\n", sum2);
+	return (0);
 }
