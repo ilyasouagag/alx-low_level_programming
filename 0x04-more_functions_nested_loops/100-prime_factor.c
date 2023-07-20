@@ -1,5 +1,26 @@
 #include <stdio.h>
-#include <math.h>
+
+/**
+ * square - calculate square of number
+ *
+ * @a: number
+ *
+ * Return: return the square
+ */
+double square(double a)
+{
+	float sqrt, tmp;
+
+	sqrt = x / 2;
+	tmp = 0;
+
+	while (sqrt != tmp)
+	{
+		tmp = sqrt;
+		sqrt = (x / tmp + tmp) / 2;
+	}
+	return (sqrt);
+}
 /**
  * nb_premier - function that determine if a number is prime or not
  *
@@ -17,7 +38,7 @@ int nb_premier(long long int n)
 	{
 		return (1);
 	}
-	for (long long int i = 2; i <= sqrt(n); i++)
+	for (long long int i = 2; i <= square(n); i++)
 	{
 		if (n % i == 0)
 		{
@@ -41,6 +62,7 @@ int main(void)
 	{
 		if (num % i == 0)
 		{
+			OA
 			if (nb_premier(i))
 			{
 				larg_num_fac = i;
