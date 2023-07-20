@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 #include <math.h>
 /**
  * nb_premier - function that determine if a number is prime or not
@@ -34,7 +34,7 @@ int nb_premier(long long int n)
 
 int main(void)
 {
-	long long int num = 1231952;
+	long long int num = 612852475143;
 	long long int larg_num_fac = 1;
 
 	for (long long int i = 2; i <= sqrt(num); i++)
