@@ -8,7 +8,7 @@
  *
  * Return: return the value of the function
  */
-int mul(int a, int b);
+int mul(int a, int b)
 {
 	return (a * b);
 }
