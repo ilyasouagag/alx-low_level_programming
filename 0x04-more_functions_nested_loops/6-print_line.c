@@ -4,7 +4,7 @@
  * print_line - function that draws a straight line
  * @n: parameter
  */
-void print_line(int n);
+void print_line(int n)
 {
 	int i;
 
