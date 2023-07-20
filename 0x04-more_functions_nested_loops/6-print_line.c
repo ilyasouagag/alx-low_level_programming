@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * more_numbers - function that prints 10 times the numbers
+ * print_line - function that draws a straight line 
  * @n: parameter
  */
 void print_line(int n);
