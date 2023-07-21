@@ -11,13 +11,13 @@ double square(double a)
 {
 	float sqrt, tmp;
 
-	sqrt = x / 2;
+	sqrt = a / 2;
 	tmp = 0;
 
 	while (sqrt != tmp)
 	{
 		tmp = sqrt;
-		sqrt = (x / tmp + tmp) / 2;
+		sqrt = (a / tmp + tmp) / 2;
 	}
 	return (sqrt);
 }
