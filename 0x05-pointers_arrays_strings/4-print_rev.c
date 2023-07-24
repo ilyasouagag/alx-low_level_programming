@@ -6,12 +6,19 @@
  */
 void print_rev(char *s)
 {
-	int a = _strlen(s);
-	int i;
 
-	for (i = a; i >= 0; i--)
+	int len = 0;
+
+	while (*s)
 	{
-		_putchar(*(s + i));
+		len++;
+		s++;
 	}
-	_putchar('\n');
+	s--;
+	while (*s)
+	{
+
+		putchar(*s);
+		s--;
+	}
 }
