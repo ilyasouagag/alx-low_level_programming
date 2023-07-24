@@ -12,7 +12,6 @@ void rev_string(char *s)
 	{
 		len++;
 	}
-	printf("%d", len);
 	while (i < len / 2)
 	{
 		char temp = *(s + i);
