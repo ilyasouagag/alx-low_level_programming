@@ -8,24 +8,20 @@
  *
  * Return: returns the copied string
  */
-char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, const char *src, int n)
 {
-	int i, j, len = 0;
+	int i;
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		len++;
+		dest[i] = src[i];
 	}
-	for (j = 0; j < n; j++)
+
+	while (i < n)
 	{
-		dest[j] = src[j];
+		dest[i] = '\0';
+		i++;
 	}
-	if (n < len)
-	{
-		for (j = n; dest[j] != '\0'; j++)
-		{
-		}
-	}
-	dest[j] = '\0';
+
 	return (dest);
 }
