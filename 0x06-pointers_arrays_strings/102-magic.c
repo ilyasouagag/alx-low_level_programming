@@ -1,9 +1,5 @@
-#include "main.h"
-/**
- * main - principal function
- *
- * Return: always 0
- */
+#include <stdio.h>
+
 int main(void)
 {
 	int n;
