@@ -5,7 +5,7 @@
  */
 void print_number(int n)
 {
-	int i = 0;
+	unsigned int i = 0;
 	int j = 0;
 
 	if (n < 0)
@@ -26,6 +26,7 @@ void print_number(int n)
 	while (i > 0)
 	{
 		_putchar((i % 10) + '0');
+		
 		i = i / 10;
 	}
 }
