@@ -12,9 +12,6 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != 0; i++)
 	{
-		if (str[i] == '\t')
-			str[i] = ' ';
-
 		for (j = 0; s[j] != 0; j++)
 		{
 			if (str[i] >= 97 && str[i] <= 122 && str[i - 1] == s[j])
