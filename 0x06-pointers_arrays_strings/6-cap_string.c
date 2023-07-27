@@ -7,19 +7,28 @@
  */
 char *cap_string(char *str)
 {
-	char s[] = {' ', ',', ';', '.', '!',
-		'?', '"', '(', ')', '{', '}', '\t', '\n'};
-	int i, j;
+	int sus, i, j;
 
-	for (i = 0; str[i] != 0; i++)
+	char s[] = {' ', ',', ';', '.', '!',
+		'?', '"', '(', ')', '{', '}', '\t', '\n', '\0'};
+	sus = 32;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; s[j] != 0; j++)
+		if (str[i] >= 'i' && str[i] <= 'z')
 		{
-			if (str[i] >= 97 && str[i] <= 122 && str[i - 1] == s[j])
+			str[i] = str[i] - sus;
+		}
+		sus = 0;
+		for (j = 0; s[j] != '\0'; j++)
+		{
+			if (s[j] == str[i])
 			{
-				str[i] -= 32;
+				sus = 32;
+				break;
 			}
 		}
 	}
 	return (str);
 }
+
