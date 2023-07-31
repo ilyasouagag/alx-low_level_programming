@@ -6,20 +6,19 @@
  * @c : character
  * Return: return a pointer to string
  */
-
 char *_strchr(char *s, char c)
 {
-	char *p;
-	int i = 0;
+	char *p = s;
 
-	while (s[i] != '\0')
+	while (*p != '\0')
 	{
-		if (s[i] == c)
+		if (*p == c)
 		{
-			p = (s + i);
+
 			return (p);
 		}
-		i++;
+		p++;
 	}
-	return (0);
+	return (NULL);
 }
+
