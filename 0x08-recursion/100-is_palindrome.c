@@ -31,7 +31,9 @@ int number(char *s, char *p)
 		number(s + 1, p - 1);
 	}
 	else
+	{
 		return (0);
+	}
 }
 /**
  * length - calculate the length
