@@ -28,7 +28,7 @@ int number(char *s, char *p)
 
 	else if (*s == *p)
 	{
-		number(s + 1, p - 1);
+		return (number(s + 1, p - 1));
 	}
 	else
 	{
