@@ -1,9 +1,12 @@
 #include "main.h"
 /**
  * is_palindrome - returns 1 if a string is palindrome
+ * @p: pointer
  * @s: pointer to input string
  * Return: return value
 */
+int number(char *s, char *p);
+int length(char *s);
 int is_palindrome(char *s)
 {
 	char *p = s + length(s) - 1;
