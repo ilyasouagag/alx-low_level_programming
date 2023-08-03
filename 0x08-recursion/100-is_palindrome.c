@@ -4,7 +4,7 @@
  * @p: pointer
  * @s: pointer to input string
  * Return: return value
-*/
+ */
 int number(char *s, char *p);
 int length(char *s);
 int is_palindrome(char *s)
@@ -31,9 +31,7 @@ int number(char *s, char *p)
 		number(s + 1, p - 1);
 	}
 	else
-	{
 		return (0);
-	}
 }
 /**
  * length - calculate the length
@@ -45,8 +43,6 @@ int length(char *s)
 	int len = 0;
 
 	if (*s != '\0')
-	{
 		len = len + 1 + length(s + 1);
-		return (len);
-	}
+	return (len);
 }
