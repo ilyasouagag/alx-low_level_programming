@@ -59,5 +59,6 @@ int main(int argc, char **argv)
 	}
 	mul = _atoi(argv[1]) * _atoi(argv[2]);
 	printf("%d\n", mul);
+
 	return (0);
 }
