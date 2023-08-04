@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 {
 	int mul = 1;
 
-	if (argc == 1)
+	if (argc < 3 || arg > 3)
 	{
 		printf("error\n");
 		return (1);
