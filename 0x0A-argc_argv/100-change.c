@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int array[5] = {25, 10, 5, 2, 1};
+	int array[] = {25, 10, 5, 2, 1};
 	int i, cents = 0;
 	int x = atoi(argv[1]);
 
