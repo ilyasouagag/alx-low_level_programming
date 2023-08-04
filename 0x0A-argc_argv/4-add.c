@@ -36,15 +36,19 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if (argv[i][0] >= '0' && argv[i][0] <= '9')
+		int j = 0;
+
+		while (argv[i][j] != '\0')
 		{
-			sum += _atoi(argv[i]);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+
+		sum += atoi(argv[i]);
 		i++;
 	}
 
