@@ -6,18 +6,26 @@
  */
 int _atoi(char *s)
 {
-	unsigned int number = 0;
-	int t = 1;
+	int result = 0;
+	int sign = 1;
+	int i = 0;
 
-	do {
-		if (*s == '-')
-			t *= -1;
-		else if (*s >= '0' && *s <= '9')
-			number = (number * 10) + (*s - '0');
-		else if (number > 0)
-			break;
-	} while (*s++);
-	return (number * t);
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	if (s[i] == '-')
+	{
+		sign = -1;
+		i++;
+	} else if (s[i] == '+')
+	{
+		i++;
+	}
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		result = result * 10 + (s[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
 
 /**
@@ -28,16 +36,14 @@ int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-	int mul, num1, num2;
+	int mul;
 
 	if (argc < 3 || argc > 3)
 	{
 		printf("error\n");
 		return (1);
 	}
-	num1 = _atoi(argv[1]);
-	num2 = _atoi(argv[2]);
-	mul = num1 * num2;
+	mul = _atoi(argv[1]) + _atoi(argv[2]);
 	printf("%d\n", mul);
 	return (0);
 }
