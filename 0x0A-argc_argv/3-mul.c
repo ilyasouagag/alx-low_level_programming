@@ -48,7 +48,7 @@ int _atoi(char *s)
  * @argv: display content of each argument
  * Return: return 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int mul;
 
@@ -57,6 +57,7 @@ int main(int argc, char **argv)
 		printf("error\n");
 		return (1);
 	}
+
 	mul = _atoi(argv[1]) * _atoi(argv[2]);
 	printf("%d\n", mul);
 
