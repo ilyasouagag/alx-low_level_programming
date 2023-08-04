@@ -6,7 +6,7 @@
  * @argv: display arguments
  * Return: return money changed
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int array[5] = {25, 10, 5, 2, 1};
 	int i, cents = 0;
