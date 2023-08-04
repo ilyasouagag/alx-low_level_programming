@@ -1,4 +1,25 @@
-#include "main.h"
+#include <stdio.h>
+/**
+ * _atoi - converts from string to integer
+ * @s: string
+ *Return: return integer
+ */
+int _atoi(char *s)
+{
+	unsigned int number = 0;
+	int t = 1;
+
+	do {
+		if (*s == '-')
+			t *= -1;
+		else if (*s >= '0' && *s <= '9')
+			number = (number * 10) + (*s - '0');
+		else if (number > 0)
+			break;
+	} while (*s++);
+	return (number * t);
+}
+
 /**
  * main - executable function
  * @argc: counts the number of arguments
