@@ -8,14 +8,15 @@
  */
 int main(int argc, char *argv[])
 {
+	int array[] = {25, 10, 5, 2, 1};
+	int i, x, cents = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	int array[] = {25, 10, 5, 2, 1};
-	int i, cents = 0;
-	int x = atoi(argv[1]);
+	x = atoi(argv[1]);
 
 	if (x < 0)
 	{
