@@ -16,7 +16,7 @@ int main(int argc, int *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	if (argv[1] < 0)
+	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
 		return (0);
@@ -26,7 +26,7 @@ int main(int argc, int *argv[])
 		while (atoi(argv[1] >= array[i]))
 		{
 			cents++;
-			argv[1] -= array[i];
+			atoi(argv[1]) -= array[i];
 		}
 	}
 	printf("%d\n", cents);
