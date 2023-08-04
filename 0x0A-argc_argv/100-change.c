@@ -10,23 +10,24 @@ int main(int argc, char *argv[])
 {
 	int array[5] = {25, 10, 5, 2, 1};
 	int i, cents = 0;
+	int x = atoi(argv[1]);
 
 	if (argc == 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (atoi(argv[1]) < 0)
+	if (x < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; i < 5 && atoi(argv[1]) >= 0; i++)
+	for (i = 0; i < 5 && x >= 0; i++)
 	{
-		while (atoi(argv[1] >= array[i]))
+		while (x >= array[i])
 		{
 			cents++;
-			atoi(argv[1]) -= array[i];
+			x -= array[i];
 		}
 	}
 	printf("%d\n", cents);
