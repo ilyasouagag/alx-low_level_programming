@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 			j++;
 		}
 
-		sum += atoi(argv[i]);
+		sum += _atoi(argv[i]);
 		i++;
 	}
 
