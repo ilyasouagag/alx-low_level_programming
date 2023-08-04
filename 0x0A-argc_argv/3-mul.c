@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _atoi - converts from string to integer
  * @s: string
@@ -6,28 +6,19 @@
  */
 int _atoi(char *s)
 {
-	int result = 0;
-	int sign = 1;
-	int i = 0;
+	unsigned int number = 0;
+	int t = 1;
 
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		i++;
-	if (s[i] == '-')
-	{
-		sign = -1;
-		i++;
-	} else if (s[i] == '+')
-	{
-		i++;
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		result = result * 10 + (s[i] - '0');
-		i++;
-	}
-	return (result * sign);
+	do {
+		if (*s == '-')
+			t *= -1;
+		else if (*s >= '0' && *s <= '9')
+			number = (number * 10) + (*s - '0');
+		else if (number > 0)
+			break;
+	} while (*s++);
+	return (number * t);
 }
-
 /**
  * main - executable function
  * @argc: counts the number of arguments
