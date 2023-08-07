@@ -21,8 +21,10 @@ char *_strdup(char *str)
 	}
 	array = (char *)malloc(sizeof(char) * len);
 	if (array == NULL)
+	{
 		printf("insufficient memory avalaible!");
-	return (NULL);
+		return (NULL);
+	}
 	while (str[i] != 0)
 	{
 		array[i] = str[i];
