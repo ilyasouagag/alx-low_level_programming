@@ -10,9 +10,8 @@ void free_grid(int **grid, int height)
 	int k;
 
 	if (grid == NULL || height == 0)
-		return (NULL);
+		return;
 	for (k = 0; k <= height; k++)
 		free(grid[k]);
 	free(grid);
-	return (NULL);
 }
