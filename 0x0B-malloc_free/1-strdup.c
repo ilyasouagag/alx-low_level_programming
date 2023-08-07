@@ -8,7 +8,7 @@
 char *_strdup(char *str)
 {
 	char *p = str;
-	unsigned int len;
+	unsigned int len = 0;
 	unsigned int i = 0;
 	char *array;
 
@@ -19,7 +19,7 @@ char *_strdup(char *str)
 		len++;
 		p++;
 	}
-	array = (char *)malloc(sizeof(char) * (len+1));
+	array = (char *)malloc(sizeof(char) * (len + 1));
 	if (array == NULL)
 	{
 		return (NULL);
