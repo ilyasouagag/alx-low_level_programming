@@ -2,7 +2,7 @@
 /**
  * malloc_checked - allocates memory
  * @b: parameter
- * exit: cause normal process termination
+ * return: 0
  */
 void *malloc_checked(unsigned int b)
 {
@@ -11,4 +11,5 @@ void *malloc_checked(unsigned int b)
 	p = (unsigned int *)malloc(b);
 	if (p == NULL)
 		exit(98);
+	return;
 }
