@@ -1,0 +1,38 @@
+#include "main.h"
+/**
+ * string_nconcat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: indicates how many letters we will concatenate
+ * Return: return string
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	int len1 = 0, len2 = 0;
+	int i = 0, j = 0;
+	char *s3;
+
+	while (s1[len1])
+		len1++;
+	while (s2[len2])
+		len2++;
+	if (n > len2)
+		n = len2;
+	s3 = (char *)malloc(sizeof(char) * (len1 + n + 1));
+	if (s3 == NULL)
+		return (NULL);
+	while (s1[i] != 0)
+	{
+		s3[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != 0 && j < n)
+	{
+		s3[i] = s2[j];
+		j++;
+		i++;
+	}
+	s3[len1 + n] = '\0';
+	return (s3);
+}
+
