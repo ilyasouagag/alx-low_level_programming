@@ -2,14 +2,14 @@
 /**
  * malloc_checked - allocates memory
  * @b: parameter
- * return: 0
+ * Return: 0
  */
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *p;
+	void *p;
 
-	p = (unsigned int *)malloc(b);
+	p = (void *)malloc(b);
 	if (p == NULL)
 		exit(98);
-	return;
+	return (p);
 }
