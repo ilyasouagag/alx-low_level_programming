@@ -1,5 +1,4 @@
 #include "dog.h"
-#include <stdlib.h>
 /**
  * new_dog - creates a new dog
  * @name: name of the dog
@@ -12,6 +11,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int len1 = 0, len2 = 0;
 	dog_t *dog;
 
+	if(name == 0 || age < 0 ||owner == 0)
+		return (NULL);
 	while (name[len1])
 		len1++;
 	while (owner[len2])
