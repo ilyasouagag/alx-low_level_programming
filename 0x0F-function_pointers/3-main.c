@@ -7,9 +7,10 @@
  */
 int main(int argc, char **argv)
 {
-	int a, b;
+	int a, b, result;
+	char c;
 	int (*func)(int, int);
-	
+
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -23,11 +24,13 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(99);
 	}
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
+	c = *argv[2];
+	if ((c == '/' || c == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", func(a, b));
+	result = func(a, b);
+	printf("%d\n", result);
 	return (0);
 }
