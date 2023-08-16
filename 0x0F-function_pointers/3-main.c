@@ -5,16 +5,16 @@
  * @argv: arguments
  * Return: return the result of operation
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int (*func)(int, int);
+	int a, b, result;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	int (*func)(int, int);
-	int a, b, result;
-
 	func = get_op_func(argv[2]);
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -30,5 +30,5 @@ int main(int argc, char *argv[])
 	}
 	result = func(a, b);
 	printf("%d\n", result);
-	return (0);
+	return (NULL);
 }
