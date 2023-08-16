@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
 	if (!func)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
-	if ((*argv[2] == '/' || *argv[2] == '%') && b == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
