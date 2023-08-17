@@ -6,11 +6,11 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i = 0;
+	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
-	while (i < n)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d", va_arg(args, int));
 		if (i == n - 1)
@@ -18,7 +18,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("\n");
 			break;
 		}
+		if (separator == NULL)
+			continue;
 		printf("%s", separator);
-		i++;
 	}
+}
+int main(void)
+{
+	print_numbers(NULL, 4, 0, 98, -1024, 402);
+	return (0);
 }
