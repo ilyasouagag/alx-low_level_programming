@@ -18,11 +18,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("\n");
 			break;
 		}
-		if (separator == NULL)
-			continue;
 		printf("%s", separator);
 		i++;
 	}
 	printf("\n");
 }
-
