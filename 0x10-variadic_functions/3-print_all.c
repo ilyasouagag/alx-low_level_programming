@@ -43,8 +43,3 @@ void print_all(const char *const format, ...)
 	printf("\n");
 	va_end(args);
 }
-int main(void)
-{
-    print_all("ceis", 'B', 3, "stSchool");
-    return (0);
-}
