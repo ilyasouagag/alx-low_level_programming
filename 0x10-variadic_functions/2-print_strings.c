@@ -18,6 +18,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
+		if (n == 1 && str != NULL)
+		{
+			printf("%s", str);
+			break;
+		}
 		if (separator == NULL && str != NULL)
 		{
 			printf("%s", str);
