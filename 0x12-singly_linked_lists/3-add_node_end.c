@@ -4,7 +4,7 @@
  * @head: pointer to node
  * @str: string to duplicate
  * Return: return node
-*/
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
@@ -15,16 +15,16 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	new->str = strdup(str);
 	new->len = strlen(str);
+	new->next = NULL;
 	if (*head == NULL)
 	{
 		*head = new;
-		new->next = NULL;
+		return (new);
 	}
 	while (current->next != NULL)
 	{
 		current = current->next;
 	}
 	current->next = new;
-	new->next = NULL;
-	return (*head);
+	return (new);
 }
