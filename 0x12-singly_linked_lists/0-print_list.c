@@ -7,7 +7,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	list_t *current;
+	const list_t *current;
 	int count = 0;
 
 	for (current = h; current != NULL; current = current->next)
