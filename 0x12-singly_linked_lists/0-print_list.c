@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <string.h>
 /**
  * print_list - function that prints all the elements
  * @h: pointer to struct
