@@ -4,7 +4,7 @@
  * @head: pointer to struct
  * @n: data
  * Return: return node
-*/
+ */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *temp;
