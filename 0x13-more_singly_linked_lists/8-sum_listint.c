@@ -2,7 +2,7 @@
 /**
  * sum_listint - sum of all the data of linked list
  * @head: pointer to node
- * Return : return the sum
+ * Return: return the sum
  */
 int sum_listint(listint_t *head)
 {
