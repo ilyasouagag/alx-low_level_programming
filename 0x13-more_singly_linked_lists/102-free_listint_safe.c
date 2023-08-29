@@ -7,7 +7,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	size_t sus = 0;
+	int sus = 0;
 	listint_t *current, *temp;
 
 	if (h == NULL || *h == NULL)
@@ -26,7 +26,7 @@ size_t free_listint_safe(listint_t **h)
 		else
 		{
 			free(current);
-			*h = NULL;
+			current = NULL;
 			count++;
 			break;
 		}
