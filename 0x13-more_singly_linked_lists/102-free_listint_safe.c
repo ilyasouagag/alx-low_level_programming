@@ -26,11 +26,11 @@ size_t free_listint_safe(listint_t **h)
 		else
 		{
 			free(current);
-			current = NULL;
+			*h = NULL;
 			count++;
 			break;
 		}
 	}
-	current = NULL;
+	*h = NULL;
 	return (count);
 }
