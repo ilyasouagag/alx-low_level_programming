@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 	int v = 0;
 	if (n == 0)
 	{
-		_putchar('0');
+		putchar('0');
 		return;
 	}
 	for (i = 31; i >= 0; i--)
@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 		{
 			while (i >= 0)
 			{
-				_putchar((n >> i & 1) + '0');
+				putchar((n >> i & 1) + '0');
 				i--;
 			}
 		}
