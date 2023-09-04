@@ -5,10 +5,9 @@
  * @message: message
  * @filename: parameter
  */
-void exit_with_error(int code, const char *message, const char *filename)
-{
-	dprintf(STDERR_FILENO, message, filename);
-	exit(code);
+void exit_with_error(int code, const char *message, const char *filename) {
+    dprintf(STDERR_FILENO, message, filename);
+    exit(code);
 }
 /**
  * main - program that copies the content of a file to another
@@ -29,10 +28,7 @@ int main(int argc, char *argv[])
 		exit_with_error(98, "Error: Can't read from file %s\n", argv[1]);
 	f = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0644);
 	if (f == -1)
-	{
 		exit_with_error(99, "Error: Can't write to %s\n", argv[2]);
-	}
-
 	while ((p = read(fp, buffer, sizeof(buffer))) > 0)
 	{
 		pf = write(f, buffer, p);
