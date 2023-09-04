@@ -21,12 +21,12 @@ int main(int argc, char **argv)
 	}
 	f = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0644);
 	if (f == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while ((p = read(fp, buffer, sizeof(buffer))) > 0)
 	{
 		pf = write(f, buffer, p);
 		if (pf == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (p == -1)
 	{
