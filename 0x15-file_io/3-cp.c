@@ -11,6 +11,22 @@ void exit_with_error(int code, const char *message, const char *filename)
 	exit(code);
 }
 /**
+ * close_file - Closes file descriptors.
+ * @fd: The file descriptor to be closed.
+ */
+void close_file(int fd)
+{
+	int c;
+
+	c = close(fd);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+/**
  * main - program that copies the content of a file to another
  * @argc: number of arguments
  * @argv: arguments
@@ -52,7 +68,7 @@ int main(int argc, char *argv[])
 		close(to_fd);
 		exit_with_error(98, "Error: Can't read from file %s\n", argv[1]);
 	}
-	close(from_fd);
-	close(to_fd);
+	close_file(from_fd);
+	close_file(to_fd);
 	return (0);
 }
