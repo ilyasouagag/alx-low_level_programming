@@ -8,7 +8,7 @@
 int main(int argc, char **argv)
 {
 	int fp, f, p;
-	char *buffer[1024];
+	char buffer[1024];
 
 	if (argc != 3)
 	{
