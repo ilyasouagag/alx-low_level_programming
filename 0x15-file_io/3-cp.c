@@ -5,9 +5,10 @@
  * @message: message
  * @filename: parameter
  */
-void exit_with_error(int code, const char *message, const char *filename) {
-    dprintf(STDERR_FILENO, message, filename);
-    exit(code);
+void exit_with_error(int code, const char *message, const char *filename)
+{
+	dprintf(STDERR_FILENO, message, filename);
+	exit(code);
 }
 /**
  * main - program that copies the content of a file to another
