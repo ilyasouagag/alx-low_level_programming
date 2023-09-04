@@ -20,30 +20,35 @@ int main(int argc, char *argv[])
 {
 	int fp, f;
 	ssize_t p, pf;
-	char *buffer;
+	char buffer[1024];
 
 	if (argc != 3)
 		exit_with_error(97, "Usage: cp file_from file_to\n", NULL);
-	buffer = malloc(sizeof(char) * 1024);
-	if (buffer == NULL)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
 	fp = open(argv[1], O_RDONLY);
 	if (fp == -1)
 		exit_with_error(98, "Error: Can't read from file %s\n", argv[1]);
 	f = open(argv[2], O_RDWR | O_TRUNC | O_CREAT, 0644);
 	if (f == -1)
+	{
+		close(fp);
 		exit_with_error(99, "Error: Can't write to %s\n", argv[2]);
+	}
 	while ((p = read(fp, buffer, sizeof(buffer))) > 0)
 	{
 		pf = write(f, buffer, p);
 		if (pf == -1)
+		{
+			close(fp);
+			close(f);
 			exit_with_error(99, "Error: Can't write to %s\n", argv[2]);
+		}
 	}
 	if (p == -1)
+	{
+		close(fp);
+		close(f);
 		exit_with_error(98, "Error: Can't read from file %s\n", argv[1]);
+	}
 	if (close(fp) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp), exit(100);
 	if (close(f) == -1)
