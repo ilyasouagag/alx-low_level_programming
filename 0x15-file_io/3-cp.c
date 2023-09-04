@@ -33,11 +33,9 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fp = close(fp);
-	f = close(f);
-	if (fp)
+	if (close(fp) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp), exit(100);
-	if (f)
+	if (close(f) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f), exit(100);
 	return (0);
 }
