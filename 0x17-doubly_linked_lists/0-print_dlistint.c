@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <string.h>
 /**
  * print_dlistint - prints all elements of list
  * @h: head of the node
