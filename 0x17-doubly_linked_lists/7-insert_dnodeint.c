@@ -8,7 +8,7 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *temp;
+	dlistint_t *temp = NULL;
 	dlistint_t *node;
 	dlistint_t *current;
 	dlistint_t *other = *h;
