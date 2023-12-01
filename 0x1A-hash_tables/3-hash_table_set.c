@@ -19,10 +19,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	current->key = malloc(strlen(key) + 1);
 	if (!current->key)
+	{
+		free(current);
 		return (0);
+	}
 	current->value = malloc(strlen(value) + 1);
 	if (!current->value)
+	{
+		free(current->key);
+		free(current);
 		return (0);
+	}
 	strcpy(current->key, key);
 	strcpy(current->value, value);
 	current->next = NULL;
