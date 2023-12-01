@@ -1,6 +1,8 @@
 #include "hash_tables.h"
 /**
- *
+ * shash_table_create - funtion that creates a table
+ * @size: size of the table
+ * Return: return a table
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
@@ -25,7 +27,11 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (table);
 }
 /**
- *
+ * shash_table_set - set a table with elements
+ * @ht: pointer to table
+ * @key: key of the node
+ * @value: value of the node
+ * Return: 1 if it's added else 0
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
@@ -95,7 +101,10 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 /**
- * 
+ * shash_table_get - get the value with only an index
+ * @ht: pointer to table
+ * @key: key of the node
+ * Return: return the value
 */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
@@ -119,7 +128,8 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (current->value);
 }
 /**
- * 
+ * shash_table_print - print table in order
+ * @ht: pointer to table
 */
 void shash_table_print(const shash_table_t *ht)
 {
@@ -140,7 +150,8 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 /**
- * 
+ * shash_table_print_rev - print table in reversed order
+ * @ht: pointer to table
 */
 void shash_table_print_rev(const shash_table_t *ht)
 {
@@ -161,7 +172,8 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 }
 /**
- * 
+ * shash_table_delete - delete the table
+ * @ht: pointer to table
 */
 void shash_table_delete(shash_table_t *ht)
 {
