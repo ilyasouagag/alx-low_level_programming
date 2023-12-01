@@ -11,6 +11,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *current;
 	unsigned long int index;
 
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+		return (0);
 	current = malloc(sizeof(hash_node_t));
 	if (!current)
 		return (0);
